@@ -1,28 +1,26 @@
 #include <iostream>
 #include <string>
 
-namespace A {
-    void display() {
-        std::cout <<"Sum of the integers: " << sum << std::endl;
+//Namespace for MathOperation
+namespace MathOperations  {
+    int add(int a, int b){
+    return a+b;
     }
 }
 
-naespace B {
-    void display() {
-        std::cout <<"New String: " << str3 << std::endl;
+//Namespace for TextOperation
+namespace TextOperations {
+    std:: string concat(std:: string a, std:: string b){
+    return a+b;
     }
 }
 
 int main(){
-    std::int i1= 39;
-    std::int i2= 11;
-    std::int sum = i1+i2;
-    A::display();
-
-    std::string str1= "Hello";
-    std::string str2= "World";
-    std::string str3= str1 + " " + str2;
-    B::display();
+    std::cout <<"Sum of the integers: " << MathOperations::add(39,11) << std::endl;  //Get sum of given 2 integers
+    std::string str1 = "Hello";  //Give string 1
+    std::string str2 = "World";  //Give string 2
+    std::string str3 = str1 + " " + str2;  //Get the concatenated string
+    std::cout <<"New String: " << str3 << std::endl; //Get it as an output
 
     return 0;
 }
